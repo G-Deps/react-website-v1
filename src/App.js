@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense, lazy} from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
@@ -12,12 +12,12 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-        </Switch>
+         <Switch>
+           <Route path='/' exact component={Home} />
+           <Route path='/services' component={Services} />
+           <Route path='/products' component={Products} />
+           <Route path="/sign-Up" component={SignUp} />
+         </Switch>
       </Router>
     </>
   );
